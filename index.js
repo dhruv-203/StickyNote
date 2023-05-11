@@ -22,22 +22,17 @@ mongoose.connect(
 
 var app = express();
 app.use(express.static("public"))
-app.set('view engine', "pug");
-app.set("views", "views")
-// app.render("./public/index.html")
 app.get("/getData", function (req, res) {
     noteModel.find().then(function (note) {
         console.log("loaded data");
         res.send(note);
     })
-    // res.send({ message: "hello" });
 })
 
 
 app.use(bodyParser.json())
 
 app.post("/postData", function (req, res) {
-    // console.log(req.body);
     var noteDoc = new noteModel({
         data: req.body.content,
     });
@@ -53,7 +48,6 @@ app.put("/updateData/:id", function (req, res) {
     const mydata = req.body.data
     noteModel.findByIdAndUpdate(id, { data: mydata }).then(() => {
         console.log("Update successfully")
-        // res.send("Update successfully")
     }).catch((err) => {
         console.log(err)
     })

@@ -67,10 +67,10 @@ function createNote(data) {
     // appending the elements created
     note.appendChild(delButton)
     container.prepend(note);
-    addME(note, delButton)
+    updateNote(note, delButton)
 }
 
-function addME(elem, delButton) {
+function updateNote(elem, delButton) {
     // adding click listener on the already present note in-order to update functionality
     elem.addEventListener("click", function (e) {
         e.stopPropagation()
@@ -126,7 +126,6 @@ function addME(elem, delButton) {
 }
 // add note button click event 
 launcher.addEventListener("click", function (e) {
-    var index = (Array.from(document.getElementsByClassName("Note"))).length + 1;
     var data = {
         content: noteInput.value,
     }
