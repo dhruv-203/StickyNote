@@ -9,7 +9,7 @@ var noteSchema = mongoose.Schema({
 
 var noteModel = mongoose.model("noteModel", noteSchema, "noteList")
 mongoose.connect(
-    "mongodb+srv://dhruv1207:xni21252cjv@cluster0.oulhutm.mongodb.net/Notes?retryWrites=true&w=majority").then(() => {
+    "mongodb+srv://dhruv1207:<Password>@cluster0.oulhutm.mongodb.net/Notes?retryWrites=true&w=majority").then(() => {
 
         const collections = mongoose.connection.collections;
         if (!collections[noteModel.collection.collectionName]) {
