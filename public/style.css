@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 38vw));
+}
+
+.Note>pre {
+    white-space: pre-wrap;
+}
+
+.Note,
+.addNote {
+    min-height: 200px;
+    max-width: 400px;
+    background-color: #fef68a;
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.addNote {
+    background-color: black;
+}
+
+textarea {
+    background-color: black;
+    color: white;
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+
+}
+
+img {
+    align-self: flex-end;
+}
+
+img:hover {
+    cursor: pointer;
+}
